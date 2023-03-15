@@ -60,8 +60,8 @@ const StudentList = () => {
     nextId.current +=1;
   }
 
-  const onRemove = id => {
-    setStudents(students.filter(student => student.id !== id))
+  const onRemove = (id) => {
+    setStudents(students.filter((student) => student.id !== id))
   }
   
   const [inputs2, setInputs2] = useState({
@@ -116,7 +116,7 @@ const StudentList = () => {
       >
 
       </CreateStudent>
-      {students.map(student => <Student student = {student} key={student.id} onRemove={onRemove} onDataChange={onDataChange2} onCompleteClick={onCompleteClick}></Student>)}
+      {students.map((student) => (<Student student = {student} key={student.id} onRemove={onRemove} onDataChange={onDataChange2} onCompleteClick={onCompleteClick}></Student>))}
     </div>
   )
 }

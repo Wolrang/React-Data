@@ -18,19 +18,20 @@ function Student({ student, onRemove, onDataChange, onCompleteClick }) {
           <button onClick={onUpdateClick}>변경</button>
           &nbsp; / &nbsp;
           <button onClick={() => onRemove(student.id)}>삭제</button>
-          {
-              cnt === 1 && 
+          {cnt === 1 && ( 
               <UpdateStudent 
               student={student}
-              onDataCgange={onDataChange}
+              onDataChange={onDataChange}
               onCompleteClick={onCompleteClick}
               setCnt={setCnt}
               />
-          }
+          )}
           <hr />
           
       </div>
   );
 }
+
+Student.defaultProps = {};
 
 export default Student;
